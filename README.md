@@ -1,5 +1,6 @@
 # GExists
 Java library to check if Gmail/Google Username exists or not you know why to use it ;)
+i made this for my own use but you guys can use it too its well documentated
 
 ### Version : 0.1
 
