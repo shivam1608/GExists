@@ -3,6 +3,25 @@ Java library to check if Gmail/Google Username exists or not you know why to use
 
 ### Version : 0.1
 
+## Ouick Start
+```java
+import me.shivzee.GExists;
+import me.shivzee.helper.Username;
+
+public class Main {
+    public static void main(String[] args) {
+        GExists user = new GExists();
+        Username username = new Username("shivzee");
+        if(username.isValid()){
+            user.exists(username , (exist)->{
+                System.out.println(exist?"Username Already exists":"Username not available");
+            });
+        }
+    }
+}
+
+```
+
 ## Add to your projects
 Easy to add in your projects using gradle, maven or jar
 
@@ -50,8 +69,38 @@ Download the jar from this repo
 out/artifact/JOpenTDB.jar or Use the Release Section
 ```
 # How to Use
+- Create Instance
+```java
+GExists user = new GExists();
+// OR
+GExists user = new GExists(true); // if want to use executor for async task
+// Note: Using executor service will result in your code not to exit so to exit the code and stop executor use
+user.exit()
+```
+
 - Check Exists (Synchronous)
 ```java
-
+	GExists user = new GExists();
+ 	Username username = new Username("shivzee");
+        if(username.isValid()){
+            boolean exists = user.exists(username);   
+        }
+        // OR you can do this way
+        boolean existsAgain = user.exists("shivzee");
 
 ```
+- Check Exists (Asynchronous)
+```java
+	GExists user = new GExists();
+        Username username = new Username("shivzee");
+        if(username.isValid()){
+            user.exists(username , (exist)->{System.out.println(exist);});   
+        }
+        // OR you can do this way
+        user.exists("shivzee" , (exist)->{System.out.println(exist);});;
+
+```
+
+## WTFPL (Do what the f*ck you want license)
+Author : Shizee
+IDE Used : IntelliJ
