@@ -12,11 +12,9 @@ public class Main {
     public static void main(String[] args) {
         GExists user = new GExists();
         Username username = new Username("shivzee");
-        if(username.isValid()){
-            user.exists(username , (exist)->{
-                System.out.println(exist?"Username Already exists":"Username not available");
-            });
-        }
+        user.exists(username , (exist)->{
+              System.out.println(exist?"Username Already exists":"Username not available");
+          });
     }
 }
 
