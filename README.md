@@ -65,7 +65,7 @@ dependencies {
 ### Jar 
 Download the jar from this repo 
 ```
-out/artifact/JOpenTDB.jar or Use the Release Section
+out/artifact/GExists.jar or Use the Release Section
 ```
 # How to Use
 - Create Instance
